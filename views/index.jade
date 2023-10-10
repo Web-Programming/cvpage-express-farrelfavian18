@@ -1,6 +1,304 @@
 extends layout
 
 block content
-  div
-    div
-    a Welcome to my CV My Name is #{nama} im form #{universitas} i was born at #{ttl}
+  body#page-top
+    // Navigation
+    nav#mainNav.navbar.navbar-expand-lg.bg-secondary.text-uppercase.fixed-top
+      .container
+        a.navbar-brand(href='#page-top') Portofolio
+        button.navbar-toggler.text-uppercase.font-weight-bold.bg-primary.text-white.rounded(type='button' data-bs-toggle='collapse' data-bs-target='#navbarResponsive' aria-controls='navbarResponsive' aria-expanded='false' aria-label='Toggle navigation')
+          | Menu
+          i.fas.fa-bars
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ms-auto
+            li.nav-item.mx-0.mx-lg-1
+              a.nav-link.py-3.px-0.px-lg-3.rounded(href='https://www.linkedin.com/in/farrelfavian18') LinkedIn
+            li.nav-item.mx-0.mx-lg-1
+              a.nav-link.py-3.px-0.px-lg-3.rounded(href='https://www.instagram.com/farrelfavian18/') Instagram
+            li.nav-item.mx-0.mx-lg-1
+              a.nav-link.py-3.px-0.px-lg-3.rounded(href='http://wa.me/6289604175799') Contact Whatsapp (089604175799)
+    //Header
+    header.masthead.bg-primary.text-white.text-center
+      .container.d-flex.align-items-center.flex-column
+        // Foto
+        img.masthead-avatar.mb-5(src='images/foto.jpeg' alt='foto farrel')
+        // Heading Nama
+        h1.masthead-heading.text-uppercase.mb-0 Farrel Favian
+        // Icon
+        .divider-custom.divider-light
+          .divider-custom-line
+          .divider-custom-icon
+            i.fas.fa-star
+          .divider-custom-line
+        // 
+        p.masthead-subheading.font-weight-light.mb-0 Web Developer - PC Building Enthusiast
+    // Portfolio Section
+    section#portfolio.page-section.portfolio
+      .container
+        // Portfolio Section Heading
+        h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 EDUKASI FORMAL
+        // Icon
+        .divider-custom
+          .divider-custom-line
+          .divider-custom-icon
+            i.fas.fa-star
+          .divider-custom-line
+        // Foto Portofolio
+        .row.justify-content-center
+          // Portfolio 1
+          .col-md-6.col-lg-4.mb-5
+            .portfolio-item.mx-auto(data-bs-toggle='modal' data-bs-target='#portfolioModal1')
+              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item-caption-content.text-center.text-white
+                  i.fas.fa-plus.fa-3x
+              img.img-fluid(src='/images/sma.jpg' alt='SMA NEGERI 15')
+          // Portfolio 2
+          .col-md-6.col-lg-4.mb-5
+            .portfolio-item.mx-auto(data-bs-toggle='modal' data-bs-target='#portfolioModal2')
+              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item-caption-content.text-center.text-white
+                  i.fas.fa-plus.fa-3x
+              img.img-fluid(src='/images/universitas.jpg' alt='...')
+          // Portfolio 3
+        // Portfolio Heading
+        h2.page-section-heading.text-center.text-uppercase.text-secondary.mb-0 KEGIATAN ORGANISASI & PENGALAMAN
+        .divider-custom
+          .divider-custom-line
+          .divider-custom-icon
+            i.fas.fa-star
+          .divider-custom-line
+          // Portfolio Items
+        .row.justify-content-center
+          .col-md-6.col-lg-4.mb-5
+            .portfolio-item.mx-auto(data-bs-toggle='modal' data-bs-target='#portfolioModal3')
+              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item-caption-content.text-center.text-white
+                  i.fas.fa-plus.fa-3x
+              img.img-fluid(src='/images/fit2.jpg' alt='...')
+          // Portfolio 4
+          .col-md-6.col-lg-4.mb-5.mb-lg-0
+            .portfolio-item.mx-auto(data-bs-toggle='modal' data-bs-target='#portfolioModal4')
+              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item-caption-content.text-center.text-white
+                  i.fas.fa-plus.fa-3x
+              img.img-fluid(src='/images/UKM2.jpg' alt='...')
+          // Portfolio 5
+          .col-md-6.col-lg-4.mb-5.mb-md-0
+            .portfolio-item.mx-auto(data-bs-toggle='modal' data-bs-target='#portfolioModal5')
+              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item-caption-content.text-center.text-white
+                  i.fas.fa-plus.fa-3x
+              img.img-fluid(src='/images/gintingjaya.jpg' alt='...')
+          // Portfolio 6
+          .col-md-6.col-lg-4
+            .portfolio-item.mx-auto(data-bs-toggle='modal' data-bs-target='#portfolioModal6')
+              .portfolio-item-caption.d-flex.align-items-center.justify-content-center.h-100.w-100
+                .portfolio-item-caption-content.text-center.text-white
+                  i.fas.fa-plus.fa-3x
+              img.img-fluid(src='/images/kampus2.png' alt='...')
+    // Kemampuan
+    section#about.page-section.bg-primary.text-white.mb-0
+      .container
+        // Heading Kemampuan
+        h2.page-section-heading.text-center.text-uppercase.text-white KEMAMPUAN
+        // Icon
+        .divider-custom.divider-light
+          .divider-custom-line
+          .divider-custom-icon
+            i.fas.fa-star
+          .divider-custom-line
+        // Kemampuan List
+        .row
+          .col-lg-4.ms-auto
+            p.lead
+              | PROGRAMMING
+            p.lead
+              | VIDEO EDITING
+            p.lead
+              | PC/LAPTOP HARDWARE MAINTENANCE
+          .col-lg-4.ms-auto
+            p.lead
+              | GAME DEVELOPMENT
+            p.lead
+              | WEB DEVELOPMENT
+
+    // Footer
+    footer.footer.text-center
+      .container
+        .row
+          // Lokasi
+          .col-lg-4
+            h4.text-uppercase.mb-4
+            p.lead.mb-0
+              
+          // Footer About Text
+          .col-lg-4
+            h4.text-uppercase.mb-4 Location
+            p.lead.mb-0
+              a(href="https://maps.app.goo.gl/Q8T6kJ5ztievD2XX7") Jl. Sersan Wahab No.2048, 20 Ilir D. I, Kec. Ilir Tim. I, Kota Palembang, Sumatera Selatan 30114                         .
+    // Copyright Section
+    .copyright.py-4.text-center.text-white
+      .container
+        small Copyright © Farrel Favian 2023
+    // Portfolio Modals
+    // Portfolio Modal 1
+    #portfolioModal1.portfolio-modal.modal.fade(tabindex='-1' aria-labelledby='portfolioModal1' aria-hidden='true')
+      .modal-dialog.modal-xl
+        .modal-content
+          .modal-header.border-0
+            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+          .modal-body.text-center.pb-5
+            .container
+              .row.justify-content-center
+                .col-lg-8
+                  // Portfolio Modal - Title
+                  h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 SMA Negeri 15 Palembang
+                  // Icon Divider
+                  .divider-custom
+                    .divider-custom-line
+                    .divider-custom-icon
+                      i.fas.fa-star
+                    .divider-custom-line
+                  // Portfolio Modal - Image
+                  img.img-fluid.rounded.mb-5(src='/images/sma2.jpg' alt='...')
+                  // Portfolio Modal - Text
+                  p.mb-4
+                    |Saya bersekolah di SMA NEGERI 15 PALEMBANG pada tahun 2017-2020, saya memilih bidang Ilmu Pengetahuan Sosial (Social) dan mempelajari banyak hal, dan mengikuti organisasi Pramuka sebagai Anggota LANTAMAL 1.
+                  button.btn.btn-primary(data-bs-dismiss='modal')
+                    i.fas.fa-xmark.fa-fw
+                    |                                         Close Window
+    // Portfolio Modal 2
+    #portfolioModal2.portfolio-modal.modal.fade(tabindex='-1' aria-labelledby='portfolioModal2' aria-hidden='true')
+      .modal-dialog.modal-xl
+        .modal-content
+          .modal-header.border-0
+            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+          .modal-body.text-center.pb-5
+            .container
+              .row.justify-content-center
+                .col-lg-8
+                  // Portfolio Modal - Title
+                  h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 UNIVERSITAS MULTI DATA PALEMBANG
+                  // Icon Divider
+                  .divider-custom
+                    .divider-custom-line
+                    .divider-custom-icon
+                      i.fas.fa-star
+                    .divider-custom-line
+                  // Portfolio Modal - Image
+                  img.img-fluid.rounded.mb-5(src='images/universitas2.jpg' alt='...')
+                  // Portfolio Modal - Text
+                  p.mb-4
+                    | Pada tahun 2020-Sekarang, saya adalah mahasiswa Universitas MDP Fakultas Komputer & Rekayasa, Prodi Sistem Informasi, Saat perkuliahan saya banyak belajar tentang Komputer dan Hubungannya dengan Organisasi maupun Masyarakat Sosial. Selain fokus pada perkuliahan saya juga mengikuti Organisasi Seperti HIMSI dan Programming Community
+                  button.btn.btn-primary(data-bs-dismiss='modal')
+                    i.fas.fa-xmark.fa-fw
+                    |                                         Close Window
+    // Portfolio Modal 3
+    #portfolioModal3.portfolio-modal.modal.fade(tabindex='-1' aria-labelledby='portfolioModal3' aria-hidden='true')
+      .modal-dialog.modal-xl
+        .modal-content
+          .modal-header.border-0
+            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+          .modal-body.text-center.pb-5
+            .container
+              .row.justify-content-center
+                .col-lg-8
+                  // Portfolio Modal - Title
+                  h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 FIT COMPETITION 2023
+                  // Icon Divider
+                  .divider-custom
+                    .divider-custom-line
+                    .divider-custom-icon
+                      i.fas.fa-star
+                    .divider-custom-line
+                  // Portfolio Modal - Image
+                  img.img-fluid.rounded.mb-5(src='images/fit.jpg' alt='...')
+                  // Portfolio Modal - Text
+                  p.mb-4
+                    | Tahun 2023 saya mengikuti FIT Competition 2023 Kategori Web Programming di Kota Salatiga Jawa Tengah, saya dan 2 teman saya Billy Fernandes dan M.Hamdandi melakukan Lomba membuat aplikasi Web bernama Nov & Com, website tersebut bertujuan untuk membantu Komikus dan Novelis pemula agar dapar bersaing dengan para Professional.
+                  button.btn.btn-primary(data-bs-dismiss='modal')
+                    i.fas.fa-xmark.fa-fw
+                    |                                         Close Window
+    // Portfolio Modal 4
+    #portfolioModal4.portfolio-modal.modal.fade(tabindex='-1' aria-labelledby='portfolioModal4' aria-hidden='true')
+      .modal-dialog.modal-xl
+        .modal-content
+          .modal-header.border-0
+            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+          .modal-body.text-center.pb-5
+            .container
+              .row.justify-content-center
+                .col-lg-8
+                  // Portfolio Modal - Title
+                  h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 UKM PROGRAMMING & HIMSI UMDP 2022 - sekarang
+                  // Icon Divider
+                  .divider-custom
+                    .divider-custom-line
+                    .divider-custom-icon
+                      i.fas.fa-star
+                    .divider-custom-line
+                  // Portfolio Modal - Image
+                  img.img-fluid.rounded.mb-5(src='images/himsi.jpg' alt='...')
+                  // Portfolio Modal - Text
+                  p.mb-4
+                    | Untuk mengisi kegiatan di perkuliahan saya mengikuti UKM Programming sebagai anggota dan Himpunan Mahasiswa Sistem Informasi sebagai anggota divisi Litbang.
+                  button.btn.btn-primary(data-bs-dismiss='modal')
+                    i.fas.fa-xmark.fa-fw
+                    |                                         Close Window
+    // Portfolio Modal 5
+    #portfolioModal5.portfolio-modal.modal.fade(tabindex='-1' aria-labelledby='portfolioModal5' aria-hidden='true')
+      .modal-dialog.modal-xl
+        .modal-content
+          .modal-header.border-0
+            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+          .modal-body.text-center.pb-5
+            .container
+              .row.justify-content-center
+                .col-lg-8
+                  // Portfolio Modal - Title
+                  h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0 MAGANG DI PT GINTING JAYA ENERGI
+                  // Icon Divider
+                  .divider-custom
+                    .divider-custom-line
+                    .divider-custom-icon
+                      i.fas.fa-star
+                    .divider-custom-line
+                  // Portfolio Modal - Image
+                  img.img-fluid.rounded.mb-5(src='images/gintingjaya.jpg' alt='...')
+                  // Portfolio Modal - Text
+                  p.mb-4
+                    | Saya dan teman Kerja Praktik saya Kevin Sanjaya melaksanakan magang selama 5 bulan yang dimana kami membuat Website E-Rekrutmen untuk perusahaan dan membantu administrasi perusahaan untuk menyusun Material Request dan lainnya.
+                  button.btn.btn-primary(data-bs-dismiss='modal')
+                    i.fas.fa-xmark.fa-fw
+                    |                                         Close Window
+    // Portfolio Modal 6
+    #portfolioModal6.portfolio-modal.modal.fade(tabindex='-1' aria-labelledby='portfolioModal6' aria-hidden='true')
+      .modal-dialog.modal-xl
+        .modal-content
+          .modal-header.border-0
+            button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+          .modal-body.text-center.pb-5
+            .container
+              .row.justify-content-center
+                .col-lg-8
+                  // Portfolio Modal - Title
+                  h2.portfolio-modal-title.text-secondary.text-uppercase.mb-0  MSIB Kampus Merdeka : Skilvul #Tech4Impact: Game Development
+                  // Icon Divider
+                  .divider-custom
+                    .divider-custom-line
+                    .divider-custom-icon
+                      i.fas.fa-star
+                    .divider-custom-line
+                  // Portfolio Modal - Image
+                  img.img-fluid.rounded.mb-5(src='images/kampusmerdeka.png' alt='...')
+                  // Portfolio Modal - Text
+                  p.mb-4
+                    | Pada tahun 2022 saya mengikuti MSIB Kampus Merdeka di Skilvul #Tech4Impact: Game Development. Saya belajar mengenai Game Development menggunakan Game Engine Unity dengan bahasa pemrograman C#. Disana saya mendapatkan pengalaman dan ilmu tentang Game Development dan mempelajari banyak hal diluar jurusan perkuliahan saya.
+                  button.btn.btn-primary(data-bs-dismiss='modal')
+                    i.fas.fa-xmark.fa-fw
+                    |                                         Close Window
+
+    // Script
+    script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js')
+    script(src='javascripts/scripts.js')
+    script(src='https://cdn.startbootstrap.com/sb-forms-latest.js')
